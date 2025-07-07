@@ -41,5 +41,32 @@ Markdown files will be saved in the `scraped_markdowns/` directory, with filenam
 - Only the raw Markdown output is saved (no content filtering or fitting is applied).
 - Make sure you have permission to crawl the target site and respect its robots.txt.
 
+## How to Use
+
+1. Download the latest binary from [Releases](https://github.com/r3k4ce/docs_crawler/releases).
+2. Run the binary:
+   ```bash
+   ./docs_crawler
+   ```
+
+Or, to run from source:
+
+```bash
+python -m docs_crawler.main <URL or sitemap.xml>
+```
+
+## Building the Binary Yourself
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   pip install pyinstaller
+   ```
+2. Build:
+   ```bash
+   pyinstaller --onefile docs_crawler/main.py
+   ```
+3. The binary will be in `dist/main`.
+
 ## License
 MIT
